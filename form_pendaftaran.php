@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_array($selected_paket)) {
             <label for="tgl_pesan">Tanggal Pesan</label>
             <input type="date" name="tgl_pesan" id="tgl_pesan">
             <label for="jumlah_hari">Waktu Pelaksanaan Perjalanan</label>
-            <input type="number" name="jumlah_hari" id="jumlah_hari">
+            <input type="number" name="jumlah_hari" id="jumlah_hari" value="0">
 
             <div class="layanan-container">
                 <div class="item-layanan">
@@ -109,7 +109,7 @@ while ($row = mysqli_fetch_array($selected_paket)) {
             </div>
 
             <label for="jumlah_peserta">Jumlah Peserta</label>
-            <input type="number" name="jumlah_peserta" id="jumlah_peserta">
+            <input type="number" name="jumlah_peserta" id="jumlah_peserta" value="0">
             <label for="harga_paket">Harga Paket Perjalanan</label>
             <input type="text" name="harga_paket" id="harga_paket">
             <label for="jumlah_tagihan">Jumlah Tagihan</label>
@@ -118,8 +118,8 @@ while ($row = mysqli_fetch_array($selected_paket)) {
 
             <div class="btn-container">
                 <input type="submit" value="Simpan">
-                <button id="btn-hitung" type="button">Hitung</button>
-                <button id="btn-reset" type="reset">Reset</button>
+                <button id="btn-hitung">Hitung</button>
+                <button id="btn-reset">Reset</button>
             </div>
         </form>
         <?php include_once("footer.php"); ?>
@@ -146,6 +146,8 @@ while ($row = mysqli_fetch_array($selected_paket)) {
         var harga_penginapan = 0;
         var harga_transportasi = 0;
         var harga_makan = 0;
+        var jumlah_peserta = 0;
+        var jumlah_hari = 0;
 
         if ($("#layanan_penginapan").is(":checked")) {
             harga_penginapan = $("#layanan_penginapan").val();
@@ -159,7 +161,8 @@ while ($row = mysqli_fetch_array($selected_paket)) {
 
         var harga_paket = parseInt(harga_penginapan) + parseInt(harga_transportasi) + parseInt(harga_makan);
 
-        $("#harga_paket").val(harga_paket);
-        alert(harga_paket);
+        var harga_paket_formatted = harga_paket.toLocaleString('de-DE')
+
+        $("#harga_paket").val(harga_paket_formatted);
     });
 </script>
