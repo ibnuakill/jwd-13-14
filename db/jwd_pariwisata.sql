@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 15, 2024 at 12:33 AM
+-- Generation Time: Aug 15, 2024 at 09:39 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -41,6 +41,13 @@ CREATE TABLE `daftar_pesanan` (
   `harga_paket` int NOT NULL,
   `total_tagihan` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `daftar_pesanan`
+--
+
+INSERT INTO `daftar_pesanan` (`id_daftar_pesanan`, `id_paket_wisata`, `nama_pemesan`, `no_tlp`, `tanggal_pemesanan`, `jumlah_peserta`, `jumlah_hari`, `akomodasi`, `transportasi`, `service_makanan`, `harga_paket`, `total_tagihan`) VALUES
+(2, 2, 'ibnu', '0895324153068', '2024-08-15', 1, 1, 1, 1, 1, 21000000, 21000000);
 
 -- --------------------------------------------------------
 
@@ -93,7 +100,7 @@ ALTER TABLE `paket_wisata`
 -- AUTO_INCREMENT for table `daftar_pesanan`
 --
 ALTER TABLE `daftar_pesanan`
-  MODIFY `id_daftar_pesanan` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_daftar_pesanan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `paket_wisata`

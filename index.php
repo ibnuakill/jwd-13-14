@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "connection.php";
 $aktif_menu = "beranda";
 include "header.php";
 ?>

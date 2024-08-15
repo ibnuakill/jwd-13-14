@@ -21,7 +21,7 @@
     ?>
     <div class="main-container">
         <div class="header-title">
-            <h1>Selamat Datang di Desa Wisata Pulesari</h1>
+            <h1>Selamat Datang di Wisata Indonesia</h1>
         </div>
         <div class="img-header">
             <img src="images/header-1.jpg" alt="Camping" />
@@ -36,7 +36,7 @@
 
             <a class="<?php echo renderAktifMenu($aktif_menu, "form_pendaftaran") ?>" href="form_pendaftaran.php">Daftar Paket Wisata</a>
 
-            <a class="<?php echo renderAktifMenu($aktif_menu, "edit_pemesanan") ?>" href="edit_pemesanan.php">Modifikasi Pesanan</a>
+            <a class="<?php echo renderAktifMenu($aktif_menu, "list_pemesanan") ?>" href="list_pemesanan.php">Modifikasi Pesanan</a>
         </div>
     </div>
 </body>
