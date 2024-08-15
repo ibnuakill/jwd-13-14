@@ -74,57 +74,35 @@ while ($row = mysqli_fetch_array($selected_paket)) {
             <input type="date" name="tgl_pesan" id="tgl_pesan" required>
 
             <label for="jumlah_hari">Waktu Pelaksanaan Perjalanan</label>
-<<<<<<< HEAD
             <input type="number" name="jumlah_hari" id="jumlah_hari" value="1">
 
             <label for="jumlah_hari">Pelayanan Paket Perjalanan</label>
 
-=======
-            <input type="number" name="jumlah_hari" id="jumlah_hari" value="0">
->>>>>>> 5dcb666002aaa6c65c8eb77bbb321a5ed78afe09
 
             <div class="layanan-container">
             </div>
 
-<<<<<<< HEAD
             <div class="item-layanan">
                 <label
                     for="layanan_penginapan">Penginapan
                     <?php
-=======
-            <label for="jumlah_peserta">Jumlah Peserta</label>
-            <input type="number" name="jumlah_peserta" id="jumlah_peserta" value="0">
-            <label for="harga_paket">Harga Paket Perjalanan</label>
-            <input type="text" name="harga_paket" id="harga_paket">
-            <label for="jumlah_tagihan">Jumlah Tagihan</label>
-            <input type="text" name="jumlah_tagihan" id="jumlah_tagihan">
->>>>>>> 5dcb666002aaa6c65c8eb77bbb321a5ed78afe09
 
                     echo "" . number_format($harga_penginapan, 0, ',', '.');
 
-<<<<<<< HEAD
                     ?>
                 </label>
                 <input type="checkbox" name="layanan_penginapan" id="layanan_penginapan" value="<?php echo $harga_penginapan; ?>" checked>
-=======
-            <div class="btn-container">
-                <input type="submit" value="Simpan">
-                <button id="btn-hitung">Hitung</button>
-                <button id="btn-reset">Reset</button>
->>>>>>> 5dcb666002aaa6c65c8eb77bbb321a5ed78afe09
             </div>
 
 
             <div class="item-layanan">
-                <label
-                    for="layanan_transportasi">Transportasi
+                <label for="layanan_penginapan">
+                    Penginapan
                     <?php
-
-                    echo "" . number_format($harga_transportasi, 0, ',', '.');
-
+                    echo "" . number_format($harga_penginapan, 0, ',', '.');
                     ?>
                 </label>
-                <input type="checkbox" name="layanan_transportasi" id="layanan_transportasi" value="<?php echo $harga_transportasi; ?>" checked>
+                <input type="checkbox" name="layanan_penginapan" id="layanan_penginapan" value="<?php echo $harga_penginapan; ?>" checked>
             </div>
 
             <div class="item-layanan">
@@ -181,16 +159,6 @@ while ($row = mysqli_fetch_array($selected_paket)) {
             }
         });
 
-<<<<<<< HEAD
-=======
-    $("btn-hitung").on('click', function() {
-        event.preventDefault();
-        var harga_penginapan = 0;
-        var harga_transportasi = 0;
-        var harga_makan = 0;
-        var jumlah_peserta = 0;
-        var jumlah_hari = 0;
->>>>>>> 5dcb666002aaa6c65c8eb77bbb321a5ed78afe09
 
         $("#btn-hitung").on('click', function() {
             event.preventDefault();
@@ -270,11 +238,5 @@ while ($row = mysqli_fetch_array($selected_paket)) {
 
 
 
-<<<<<<< HEAD
-=======
-        var harga_paket_formatted = harga_paket.toLocaleString('de-DE')
-
-        $("#harga_paket").val(harga_paket_formatted);
->>>>>>> 5dcb666002aaa6c65c8eb77bbb321a5ed78afe09
     });
 </script>
